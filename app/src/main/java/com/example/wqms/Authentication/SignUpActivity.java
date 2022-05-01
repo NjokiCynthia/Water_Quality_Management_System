@@ -7,7 +7,6 @@ import android.content.Context;
 import android.content.Intent;
 import android.content.SharedPreferences;
 import android.os.Bundle;
-import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
@@ -18,7 +17,6 @@ import com.example.wqms.R;
 import com.example.wqms.model.User;
 import com.google.android.gms.tasks.OnCompleteListener;
 import com.google.android.gms.tasks.Task;
-import com.google.firebase.auth.AuthResult;
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
@@ -51,7 +49,7 @@ public class SignUpActivity extends AppCompatActivity {
 
         mAuth = FirebaseAuth.getInstance();
         firebaseDatabase = FirebaseDatabase.getInstance();
-        databaseReference = firebaseDatabase.getReference("WQLM");
+        databaseReference = firebaseDatabase.getReference("WQMS");
         sharedPreferences = getSharedPreferences(getResources()
                         .getString(R.string.global_preference_file_name),
                 Context.MODE_PRIVATE);
@@ -121,11 +119,6 @@ public class SignUpActivity extends AppCompatActivity {
                                                     "Registration Successful",
                                                     Toast.LENGTH_LONG).show();
 
-//                                            String user_id = mAuth.getCurrentUser().getUid();
-//                                            DatabaseReference driverDb = FirebaseDatabase.getInstance().getReference().child("Users").child("Driver").child(user_id);
-//                                            driverDb.setValue(true);
-//                                            Toast.makeText(DriverLogin.this, "Registered Successfully",
-//                                                    Toast.LENGTH_SHORT).show();
                                         } else {
                                             Toast.makeText(getApplicationContext(),
                                                     "Registration Failed. Try again.",
