@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "655174691846",
+    "project_id": "wqlm-aed68",
+    "storage_bucket": "wqlm-aed68.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:655174691846:android:3746a3fb5fef07098aa787",
+        "android_client_info": {
+          "package_name": "com.example.wqms"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "655174691846-qmvkgfnrpppdqndod42dpk6lgk8680kp.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyA1EX_8GCSPIzzsFFFR_wbBR1zAuYvzv2E"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "655174691846-qmvkgfnrpppdqndod42dpk6lgk8680kp.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

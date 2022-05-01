@@ -17,31 +17,31 @@
         tools:ignore="ImageContrastCheck" />
 
     <TextView
-        android:id="@+id/textView"
+        android:id="@+id/l_text"
         android:layout_marginTop="60dp"
         android:layout_width="302dp"
-        android:layout_height="76dp"
-        android:layout_alignParentTop="true"
-        android:textAlignment="center"
+        android:layout_height="60dp"
         android:textSize="15sp"
         android:textStyle="italic"
+        android:textAlignment="center"
         android:layout_gravity="center_horizontal"
-        android:text="@string/wqms_an_iot_enabled_n_water_quality_and_leakage_monitoring_system" />
+        android:text="WQMS- AN IoT enabled \n water quality and leakage monitoring system" />
 
     <EditText
+        android:id="@+id/l_email"
         android:layout_width="253dp"
         android:layout_height="wrap_content"
-        android:hint="@string/username"
         android:layout_gravity="center_horizontal"
-        android:minHeight="48dp"
-        android:textAlignment="center"
+        android:autofillHints=""
         android:ems="10"
-        android:autofillHints="">
+        android:hint="Email Address"
+        android:minHeight="48dp"
+        android:textAlignment="center">
 
     </EditText>
 
     <EditText
-        android:id="@+id/editTextTextPassword"
+        android:id="@+id/l_password"
         android:layout_width="253dp"
         android:layout_height="wrap_content"
         android:ems="10"
@@ -60,7 +60,7 @@
         android:layout_height="45dp"
         android:layout_gravity="center_horizontal"
         android:layout_marginTop="20dp"
-        tools:text="@string/login">
+        android:text="LOGIN">
 
     </Button>
 
@@ -79,12 +79,21 @@
 
         <TextView
             android:layout_marginLeft="160dp"
-            android:id="@+id/textView3"
+            android:id="@+id/forgot"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:textColor="#00BCD4"
             android:text="@string/forgot_password" />
     </LinearLayout>
+
+    <ProgressBar
+        android:id="@+id/progressbar"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:visibility="visible"
+        android:layout_gravity="center">
+
+    </ProgressBar>
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
