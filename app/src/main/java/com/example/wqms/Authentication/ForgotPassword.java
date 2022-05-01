@@ -6,7 +6,6 @@ import androidx.appcompat.app.AppCompatActivity;
 import android.content.Intent;
 import android.os.Bundle;
 import android.util.Patterns;
-import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.TextView;
@@ -35,23 +34,13 @@ public class ForgotPassword extends AppCompatActivity {
 
         auth = FirebaseAuth.getInstance();
 
-        r_login.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                Intent intent = new Intent(ForgotPassword.this,
-                        com.example.wqms.Authentication.LoginActivity.class);
-                startActivity(intent);
-            }
+        r_login.setOnClickListener(view -> {
+            Intent intent = new Intent(ForgotPassword.this,
+                    LoginActivity.class);
+            startActivity(intent);
         });
 
-        reset_p.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                resetPassword();
-            }
-
-        });
-
+        reset_p.setOnClickListener(view -> resetPassword());
     }
     private void resetPassword() {
         String email = f_email.getText().toString().trim();
@@ -70,7 +59,7 @@ public class ForgotPassword extends AppCompatActivity {
             public void onComplete(@NonNull Task<Void> task) {
                 if (task.isSuccessful()){
                     Toast.makeText(ForgotPassword.this,
-                            "Check your email to reset ypur password", Toast.LENGTH_LONG).show();
+                            "Check your email to reset your password", Toast.LENGTH_LONG).show();
                 }else{
                     Toast.makeText(ForgotPassword.this,
                             "Try Again, there is an error.", Toast.LENGTH_LONG).show();
