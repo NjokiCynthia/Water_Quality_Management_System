@@ -31,7 +31,7 @@ public class SignUpActivity extends AppCompatActivity {
     EditText email, phone, password, username;
     User user;
     FirebaseAuth mAuth;
-    String userName, emailAddress, phoneNumber, Password;
+    String userName, emailAddress, phoneNumber, Password, uuid;
     FirebaseDatabase firebaseDatabase;
     DatabaseReference databaseReference;
     private SharedPreferences sharedPreferences;
@@ -73,6 +73,7 @@ public class SignUpActivity extends AppCompatActivity {
         emailAddress = email.getText().toString();
         phoneNumber = phone.getText().toString();
         Password = password.getText().toString();
+        //String newPass =  sha256(password);
 
         if (userName.isEmpty()) {
             username.setError("The username is required");
@@ -103,6 +104,7 @@ public class SignUpActivity extends AppCompatActivity {
             user.setEmailAddress(emailAddress);
             user.setPassword(Password);
             user.setPhoneNumber(phoneNumber);
+            user.setUuid(uuid);
 
             mAuth.createUserWithEmailAndPassword(emailAddress, Password)
                     .addOnCompleteListener(task -> {
