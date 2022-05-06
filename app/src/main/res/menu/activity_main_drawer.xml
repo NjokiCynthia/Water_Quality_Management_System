@@ -11,11 +11,21 @@
         <item
             android:id="@+id/nav_gallery"
             android:icon="@drawable/ic_ph"
-            android:title="pH Data" />
+            android:title="Live Data" />
+        <item
+            android:id="@+id/flow"
+            android:icon="@drawable/ic_flow_rate"
+            android:title="Sales"/>
+
         <item
             android:id="@+id/turbidity"
             android:icon="@drawable/ic_turbidity"
-            android:title="Turbidity" />
+            android:title="Reports" />
+
+        <item
+            android:id="@+id/profile"
+            android:icon="@drawable/ic_turbidity"
+            android:title="Profile" />
         <item
             android:id="@+id/rate"
             android:icon="@drawable/ic_rate_me"

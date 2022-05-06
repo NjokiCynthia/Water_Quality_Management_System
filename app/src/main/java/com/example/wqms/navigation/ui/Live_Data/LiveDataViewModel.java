@@ -1,16 +1,16 @@
-package com.example.wqms.navigation.ui.PH_DATA;
+package com.example.wqms.navigation.ui.Live_Data;
 
 import androidx.lifecycle.LiveData;
 import androidx.lifecycle.MutableLiveData;
 import androidx.lifecycle.ViewModel;
 
-public class PHViewModel extends ViewModel {
+public class LiveDataViewModel extends ViewModel {
 
     private final MutableLiveData<String> mText;
 
-    public PHViewModel() {
+    public LiveDataViewModel() {
         mText = new MutableLiveData<>();
-        mText.setValue("This is the PH fragment");
+        mText.setValue("This is the Live Data fragment");
     }
 
     public LiveData<String> getText() {

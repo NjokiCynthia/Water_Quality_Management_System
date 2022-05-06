@@ -6,6 +6,8 @@
     tools:context=".navigation.ui.Profile.ProfileFragment">
 
     <TextView
+
+        android:id="@+id/text_profile"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:text="Hello" />

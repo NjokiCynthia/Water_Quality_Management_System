@@ -12,6 +12,9 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.WQMS">
         <activity
+            android:name=".navigation.ui.RateApp"
+            android:exported="false" />
+        <activity
             android:name=".navigation.Navigate"
             android:exported="false"
             android:label="@string/title_activity_navigate"

@@ -4,6 +4,8 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import android.os.Bundle;
 
+import com.example.wqms.R;
+
 public class RateApp extends AppCompatActivity {
 
     @Override

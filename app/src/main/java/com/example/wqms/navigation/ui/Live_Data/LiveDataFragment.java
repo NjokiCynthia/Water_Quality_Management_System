@@ -1,4 +1,4 @@
-package com.example.wqms.navigation.ui.PH_DATA;
+package com.example.wqms.navigation.ui.Live_Data;
 
 import android.os.Bundle;
 import android.view.LayoutInflater;
@@ -13,14 +13,14 @@ import androidx.lifecycle.ViewModelProvider;
 import com.example.wqms.databinding.FragmentGalleryBinding;
 //import com.example.wqms.navigation.databinding.FragmentGalleryBinding;
 
-public class PHFragment extends Fragment {
+public class LiveDataFragment extends Fragment {
 
     private FragmentGalleryBinding binding;
 
     public View onCreateView(@NonNull LayoutInflater inflater,
                              ViewGroup container, Bundle savedInstanceState) {
-        PHViewModel galleryViewModel =
-                new ViewModelProvider(this).get(PHViewModel.class);
+        LiveDataViewModel galleryViewModel =
+                new ViewModelProvider(this).get(LiveDataViewModel.class);
 
         binding = FragmentGalleryBinding.inflate(inflater, container, false);
         View root = binding.getRoot();

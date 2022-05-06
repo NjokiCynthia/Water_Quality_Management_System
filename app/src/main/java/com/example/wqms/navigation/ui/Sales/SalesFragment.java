@@ -1,4 +1,4 @@
-package com.example.wqms.navigation.ui.slideshow;
+package com.example.wqms.navigation.ui.Sales;
 
 import android.os.Bundle;
 import android.view.LayoutInflater;
@@ -10,24 +10,24 @@ import androidx.annotation.NonNull;
 import androidx.fragment.app.Fragment;
 import androidx.lifecycle.ViewModelProvider;
 
-import com.example.wqms.databinding.FragmentSlideshowBinding;
+//import com.example.wqms.databinding.FragmentSlideshowBinding;
 
 //import com.example.wqms.navigation.databinding.FragmentSlideshowBinding;
 
-public class FlowRateFragment extends Fragment {
+public class SalesFragment extends Fragment {
 
-    private FragmentSlideshowBinding binding;
+    private FragmentSalesBinding binding;
 
     public View onCreateView(@NonNull LayoutInflater inflater,
                              ViewGroup container, Bundle savedInstanceState) {
-        FlowRateViewModel slideshowViewModel =
-                new ViewModelProvider(this).get(FlowRateViewModel.class);
+        SalesViewModel salesViewModel =
+                new ViewModelProvider(this).get(SalesViewModel.class);
 
         binding = FragmentSlideshowBinding.inflate(inflater, container, false);
         View root = binding.getRoot();
 
         final TextView textView = binding.textSlideshow;
-        slideshowViewModel.getText().observe(getViewLifecycleOwner(), textView::setText);
+        salesViewModel.getText().observe(getViewLifecycleOwner(), textView::setText);
         return root;
     }
 

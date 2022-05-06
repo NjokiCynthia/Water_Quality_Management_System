@@ -3,6 +3,8 @@ package com.example.wqms.navigation;
 import android.os.Bundle;
 import android.view.Menu;
 import android.view.View;
+import android.widget.ImageView;
+import android.widget.TextView;
 
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.drawerlayout.widget.DrawerLayout;
@@ -22,12 +24,22 @@ public class Navigate extends AppCompatActivity {
     private AppBarConfiguration mAppBarConfiguration;
     private ActivityNavigateBinding binding;
 
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
 
         binding = ActivityNavigateBinding.inflate(getLayoutInflater());
         setContentView(binding.getRoot());
+
+//        NavigationView navigationView = (NavigationView) findViewById(R.id.nav_view);
+//        View headerView = navigationView.getHeaderView(0);
+//        TextView navUsername = (TextView) headerView.findViewById(R.id.navUsername);
+//        navUsername.setText("Your Text Here");
+
+//        View nav = navigationView.getHeaderView(0);
+//        TextView Username= (ImageView)nav.findViewById(R.id.username);
+//        TextView Email= (ImageView)nav.findViewById(R.id.Email);
 
         setSupportActionBar(binding.appBarNavigate.toolbar);
         binding.appBarNavigate.fab.setOnClickListener(new View.OnClickListener() {
