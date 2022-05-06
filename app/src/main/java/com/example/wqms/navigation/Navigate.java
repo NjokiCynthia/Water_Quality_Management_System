@@ -3,8 +3,6 @@ package com.example.wqms.navigation;
 import android.os.Bundle;
 import android.view.Menu;
 import android.view.View;
-import android.widget.ImageView;
-import android.widget.TextView;
 
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.drawerlayout.widget.DrawerLayout;
@@ -15,7 +13,6 @@ import androidx.navigation.ui.NavigationUI;
 
 import com.example.wqms.R;
 import com.example.wqms.databinding.ActivityNavigateBinding;
-//import com.example.wqms.navigation.databinding.ActivityNavigateBinding;
 import com.google.android.material.navigation.NavigationView;
 import com.google.android.material.snackbar.Snackbar;
 
@@ -42,24 +39,26 @@ public class Navigate extends AppCompatActivity {
 //        TextView Email= (ImageView)nav.findViewById(R.id.Email);
 
         setSupportActionBar(binding.appBarNavigate.toolbar);
-        binding.appBarNavigate.fab.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                Snackbar.make(view, "Replace with your own action", Snackbar.LENGTH_LONG)
-                        .setAction("Action", null).show();
-            }
-        });
+//        binding.appBarNavigate.fab.setOnClickListener(new View.OnClickListener() {
+//            @Override
+//            public void onClick(View view) {
+//                Snackbar.make(view, "Replace with your own action", Snackbar.LENGTH_LONG)
+//                        .setAction("Action", null).show();
+//            }
+//        });
         DrawerLayout drawer = binding.drawerLayout;
         NavigationView navigationView = binding.navView;
         // Passing each menu ID as a set of Ids because each
         // menu should be considered as top level destinations.
         mAppBarConfiguration = new AppBarConfiguration.Builder(
-                R.id.nav_home, R.id.nav_gallery, R.id.nav_slideshow)
+                R.id.nav_home, R.id.nav_live_data, R.id.nav_sales,
+                R.id.nav_reports, R.id.nav_profile, R.id.nav_rate)
                 .setOpenableLayout(drawer)
                 .build();
         NavController navController = Navigation.findNavController(this,
                 R.id.nav_host_fragment_content_navigate);
-        NavigationUI.setupActionBarWithNavController(this, navController, mAppBarConfiguration);
+        NavigationUI.setupActionBarWithNavController(this, navController,
+                mAppBarConfiguration);
         NavigationUI.setupWithNavController(navigationView, navController);
     }
 
@@ -72,7 +71,8 @@ public class Navigate extends AppCompatActivity {
 
     @Override
     public boolean onSupportNavigateUp() {
-        NavController navController = Navigation.findNavController(this, R.id.nav_host_fragment_content_navigate);
+        NavController navController = Navigation.findNavController(this,
+                R.id.nav_host_fragment_content_navigate);
         return NavigationUI.navigateUp(navController, mAppBarConfiguration)
                 || super.onSupportNavigateUp();
     }

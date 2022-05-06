@@ -9,25 +9,25 @@
             android:icon="@drawable/ic_home"
             android:title="@string/menu_home" />
         <item
-            android:id="@+id/nav_gallery"
+            android:id="@+id/nav_live_data"
             android:icon="@drawable/ic_ph"
             android:title="Live Data" />
         <item
-            android:id="@+id/flow"
+            android:id="@+id/nav_sales"
             android:icon="@drawable/ic_flow_rate"
             android:title="Sales"/>
 
         <item
-            android:id="@+id/turbidity"
+            android:id="@+id/nav_reports"
             android:icon="@drawable/ic_turbidity"
             android:title="Reports" />
 
         <item
-            android:id="@+id/profile"
+            android:id="@+id/nav_profile"
             android:icon="@drawable/ic_turbidity"
             android:title="Profile" />
         <item
-            android:id="@+id/rate"
+            android:id="@+id/nav_rate"
             android:icon="@drawable/ic_rate_me"
             android:title="Rate Our App" />
 

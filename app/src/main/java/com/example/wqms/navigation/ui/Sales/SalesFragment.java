@@ -12,10 +12,6 @@ import androidx.lifecycle.ViewModelProvider;
 
 import com.example.wqms.databinding.FragmentSalesBinding;
 
-//import com.example.wqms.databinding.FragmentSlideshowBinding;
-
-//import com.example.wqms.navigation.databinding.FragmentSlideshowBinding;
-
 public class SalesFragment extends Fragment {
 
     private FragmentSalesBinding binding;
@@ -28,7 +24,7 @@ public class SalesFragment extends Fragment {
         binding = FragmentSalesBinding.inflate(inflater, container, false);
         View root = binding.getRoot();
 
-        final TextView textView = binding.textSlideshow;
+        final TextView textView = binding.textSales;
         salesViewModel.getText().observe(getViewLifecycleOwner(), textView::setText);
         return root;
     }

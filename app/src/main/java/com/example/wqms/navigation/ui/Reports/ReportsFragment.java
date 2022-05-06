@@ -11,28 +11,33 @@ import androidx.fragment.app.Fragment;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.TextView;
 
 import com.example.wqms.R;
+import com.example.wqms.databinding.FragmentHomeBinding;
+import com.example.wqms.databinding.ReportsFragmentBinding;
+import com.example.wqms.navigation.ui.home.HomeViewModel;
 
 public class ReportsFragment extends Fragment {
 
-    private ReportsViewModel mViewModel;
+    private ReportsFragmentBinding binding;
 
-    public static ReportsFragment newInstance() {
-        return new ReportsFragment();
+    public View onCreateView(@NonNull LayoutInflater inflater,
+                             ViewGroup container, Bundle savedInstanceState) {
+        ReportsViewModel reportsViewModel =
+                new ViewModelProvider(this).get(ReportsViewModel.class);
+
+        binding = ReportsFragmentBinding.inflate(inflater, container, false);
+        View root = binding.getRoot();
+
+        final TextView textView = binding.textReports;
+        reportsViewModel.getText().observe(getViewLifecycleOwner(), textView::setText);
+        return root;
     }
 
     @Override
-    public View onCreateView(@NonNull LayoutInflater inflater, @Nullable ViewGroup container,
-                             @Nullable Bundle savedInstanceState) {
-        return inflater.inflate(R.layout.reports_fragment, container, false);
+    public void onDestroyView() {
+        super.onDestroyView();
+        binding = null;
     }
-
-    @Override
-    public void onActivityCreated(@Nullable Bundle savedInstanceState) {
-        super.onActivityCreated(savedInstanceState);
-        mViewModel = new ViewModelProvider(this).get(ReportsViewModel.class);
-        // TODO: Use the ViewModel
-    }
-
 }
