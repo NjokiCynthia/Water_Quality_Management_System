@@ -41,15 +41,6 @@
           android:text="@string/water_quality_management_n_system"
           android:textAlignment="center" />
 
-      <Button
-          android:id="@+id/access"
-          android:layout_width="200dp"
-          android:layout_height="wrap_content"
-          android:layout_gravity="center"
-          android:layout_marginTop="240dp"
-          android:text="@string/go_to_login" />
-
-
     </LinearLayout>
   </androidx.cardview.widget.CardView>
 

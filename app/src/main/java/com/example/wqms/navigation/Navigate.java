@@ -1,20 +1,21 @@
 package com.example.wqms.navigation;
 
 import android.os.Bundle;
-import android.view.View;
 import android.view.Menu;
+import android.view.View;
 
-import com.google.android.material.snackbar.Snackbar;
-import com.google.android.material.navigation.NavigationView;
-
+import androidx.appcompat.app.AppCompatActivity;
+import androidx.drawerlayout.widget.DrawerLayout;
 import androidx.navigation.NavController;
 import androidx.navigation.Navigation;
 import androidx.navigation.ui.AppBarConfiguration;
 import androidx.navigation.ui.NavigationUI;
-import androidx.drawerlayout.widget.DrawerLayout;
-import androidx.appcompat.app.AppCompatActivity;
 
-import com.example.wqms.navigation.databinding.ActivityNavigateBinding;
+import com.example.wqms.R;
+import com.example.wqms.databinding.ActivityNavigateBinding;
+//import com.example.wqms.navigation.databinding.ActivityNavigateBinding;
+import com.google.android.material.navigation.NavigationView;
+import com.google.android.material.snackbar.Snackbar;
 
 public class Navigate extends AppCompatActivity {
 
@@ -44,7 +45,8 @@ public class Navigate extends AppCompatActivity {
                 R.id.nav_home, R.id.nav_gallery, R.id.nav_slideshow)
                 .setOpenableLayout(drawer)
                 .build();
-        NavController navController = Navigation.findNavController(this, R.id.nav_host_fragment_content_navigate);
+        NavController navController = Navigation.findNavController(this,
+                R.id.nav_host_fragment_content_navigate);
         NavigationUI.setupActionBarWithNavController(this, navController, mAppBarConfiguration);
         NavigationUI.setupWithNavController(navigationView, navController);
     }

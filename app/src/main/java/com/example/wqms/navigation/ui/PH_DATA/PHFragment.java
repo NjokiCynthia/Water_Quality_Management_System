@@ -13,14 +13,14 @@ import androidx.lifecycle.ViewModelProvider;
 import com.example.wqms.databinding.FragmentGalleryBinding;
 //import com.example.wqms.navigation.databinding.FragmentGalleryBinding;
 
-public class GalleryFragment extends Fragment {
+public class PHFragment extends Fragment {
 
     private FragmentGalleryBinding binding;
 
     public View onCreateView(@NonNull LayoutInflater inflater,
                              ViewGroup container, Bundle savedInstanceState) {
-        GalleryViewModel galleryViewModel =
-                new ViewModelProvider(this).get(GalleryViewModel.class);
+        PHViewModel galleryViewModel =
+                new ViewModelProvider(this).get(PHViewModel.class);
 
         binding = FragmentGalleryBinding.inflate(inflater, container, false);
         View root = binding.getRoot();

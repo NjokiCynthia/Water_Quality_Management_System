@@ -3,12 +3,18 @@
   <component name="DesignSurface">
     <option name="filePathToZoomLevelMap">
       <map>
+        <entry key="..\:/Users/njoki/AndroidStudioProjects/WQMS/app/src/main/res/drawable/ic_menu_camera.xml" value="0.105" />
+        <entry key="..\:/Users/njoki/AndroidStudioProjects/WQMS/app/src/main/res/drawable/ic_menu_gallery.xml" value="0.105" />
         <entry key="..\:/Users/njoki/AndroidStudioProjects/WQMS/app/src/main/res/layout/activity_forgot_password.xml" value="0.225" />
         <entry key="..\:/Users/njoki/AndroidStudioProjects/WQMS/app/src/main/res/layout/activity_home.xml" value="0.225" />
         <entry key="..\:/Users/njoki/AndroidStudioProjects/WQMS/app/src/main/res/layout/activity_login.xml" value="0.22" />
         <entry key="..\:/Users/njoki/AndroidStudioProjects/WQMS/app/src/main/res/layout/activity_main.xml" value="0.1" />
+        <entry key="..\:/Users/njoki/AndroidStudioProjects/WQMS/app/src/main/res/layout/activity_navigate.xml" value="0.14791666666666667" />
         <entry key="..\:/Users/njoki/AndroidStudioProjects/WQMS/app/src/main/res/layout/activity_sign_up.xml" value="0.2109375" />
         <entry key="..\:/Users/njoki/AndroidStudioProjects/WQMS/app/src/main/res/layout/activity_sign_up2.xml" value="0.225" />
+        <entry key="..\:/Users/njoki/AndroidStudioProjects/WQMS/app/src/main/res/layout/content_navigate.xml" value="0.14791666666666667" />
+        <entry key="..\:/Users/njoki/AndroidStudioProjects/WQMS/app/src/main/res/menu/activity_main_drawer.xml" value="0.1" />
+        <entry key="..\:/Users/njoki/AndroidStudioProjects/WQMS/app/src/main/res/menu/navigate.xml" value="0.1" />
       </map>
     </option>
   </component>

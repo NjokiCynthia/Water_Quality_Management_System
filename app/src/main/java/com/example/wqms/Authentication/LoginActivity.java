@@ -91,7 +91,7 @@ public class LoginActivity extends AppCompatActivity {
                     FirebaseUser user = FirebaseAuth.getInstance().getCurrentUser();
                     if (user.isEmailVerified()) {
                         Intent intent = new Intent(LoginActivity.this,
-                                com.example.wqms.ui.Home.class);
+                                com.example.wqms.navigation.Navigate.class);
                         startActivity(intent);
 
                     } else {

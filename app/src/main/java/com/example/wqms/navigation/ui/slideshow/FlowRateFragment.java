@@ -14,14 +14,14 @@ import com.example.wqms.databinding.FragmentSlideshowBinding;
 
 //import com.example.wqms.navigation.databinding.FragmentSlideshowBinding;
 
-public class SlideshowFragment extends Fragment {
+public class FlowRateFragment extends Fragment {
 
     private FragmentSlideshowBinding binding;
 
     public View onCreateView(@NonNull LayoutInflater inflater,
                              ViewGroup container, Bundle savedInstanceState) {
-        SlideshowViewModel slideshowViewModel =
-                new ViewModelProvider(this).get(SlideshowViewModel.class);
+        FlowRateViewModel slideshowViewModel =
+                new ViewModelProvider(this).get(FlowRateViewModel.class);
 
         binding = FragmentSlideshowBinding.inflate(inflater, container, false);
         View root = binding.getRoot();
