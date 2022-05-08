@@ -1,16 +1,15 @@
-package com.example.wqms.navigation.ui.Sales;
+package com.example.wqms.navigation.ui.Reservoir;
 
 import androidx.lifecycle.LiveData;
 import androidx.lifecycle.MutableLiveData;
 import androidx.lifecycle.ViewModel;
 
-public class SalesViewModel extends ViewModel {
-
+public class ReservoirViewModel extends ViewModel {
     private final MutableLiveData<String> mText;
 
-    public SalesViewModel() {
+    public ReservoirViewModel() {
         mText = new MutableLiveData<>();
-        mText.setValue("This is slideshow fragment");
+        mText.setValue("This is home fragment");
     }
 
     public LiveData<String> getText() {

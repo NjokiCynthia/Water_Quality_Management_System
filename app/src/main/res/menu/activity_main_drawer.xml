@@ -18,14 +18,14 @@
             android:title="Sales"/>
 
         <item
-            android:id="@+id/nav_reports"
+            android:id="@+id/nav_reservoir"
             android:icon="@drawable/ic_turbidity"
-            android:title="Reports" />
+            android:title="Reservoir" />
 
         <item
             android:id="@+id/nav_profile"
             android:icon="@drawable/ic_turbidity"
-            android:title="Profile" />
+            android:title="Edit Profile" />
         <item
             android:id="@+id/nav_rate"
             android:icon="@drawable/ic_rate_me"

@@ -1,4 +1,4 @@
-package com.example.wqms.navigation.ui.Sales;
+package com.example.wqms.navigation.ui.Sales_Reports;
 
 import android.os.Bundle;
 import android.view.LayoutInflater;

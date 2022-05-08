@@ -3,10 +3,9 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".navigation.ui.Profile.ProfileFragment">
+    tools:context=".navigation.ui.Edit_Profile.ProfileFragment">
 
     <TextView
-
         android:id="@+id/text_profile"
         android:layout_width="match_parent"
         android:layout_height="match_parent"

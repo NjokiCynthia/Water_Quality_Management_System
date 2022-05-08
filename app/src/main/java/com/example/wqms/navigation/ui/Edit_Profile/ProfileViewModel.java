@@ -1,15 +1,15 @@
-package com.example.wqms.navigation.ui.Reports;
+package com.example.wqms.navigation.ui.Edit_Profile;
 
 import androidx.lifecycle.LiveData;
 import androidx.lifecycle.MutableLiveData;
 import androidx.lifecycle.ViewModel;
 
-public class ReportsViewModel extends ViewModel {
+public class ProfileViewModel extends ViewModel {
     private final MutableLiveData<String> mText;
 
-    public ReportsViewModel() {
+    public ProfileViewModel() {
         mText = new MutableLiveData<>();
-        mText.setValue("This is home fragment");
+        mText.setValue("This is the profile fragment");
     }
 
     public LiveData<String> getText() {

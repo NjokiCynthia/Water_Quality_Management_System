@@ -39,20 +39,21 @@ public class Navigate extends AppCompatActivity {
 //        TextView Email= (ImageView)nav.findViewById(R.id.Email);
 
         setSupportActionBar(binding.appBarNavigate.toolbar);
-//        binding.appBarNavigate.fab.setOnClickListener(new View.OnClickListener() {
-//            @Override
-//            public void onClick(View view) {
-//                Snackbar.make(view, "Replace with your own action", Snackbar.LENGTH_LONG)
-//                        .setAction("Action", null).show();
-//            }
-//        });
+        binding.appBarNavigate.fab.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Snackbar.make(view, "Replace with your own action", Snackbar.LENGTH_LONG)
+                        .setAction("Action", null).show();
+            }
+        });
         DrawerLayout drawer = binding.drawerLayout;
         NavigationView navigationView = binding.navView;
         // Passing each menu ID as a set of Ids because each
         // menu should be considered as top level destinations.
+
         mAppBarConfiguration = new AppBarConfiguration.Builder(
                 R.id.nav_home, R.id.nav_live_data, R.id.nav_sales,
-                R.id.nav_reports, R.id.nav_profile, R.id.nav_rate)
+                R.id.nav_reservoir, R.id.nav_profile, R.id.nav_rate)
                 .setOpenableLayout(drawer)
                 .build();
         NavController navController = Navigation.findNavController(this,

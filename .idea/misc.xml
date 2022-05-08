@@ -3,15 +3,18 @@
   <component name="DesignSurface">
     <option name="filePathToZoomLevelMap">
       <map>
+        <entry key="..\:/Users/njoki/AndroidStudioProjects/WQMS/app/src/main/res/drawable/ic_live_data.xml" value="0.105" />
         <entry key="..\:/Users/njoki/AndroidStudioProjects/WQMS/app/src/main/res/drawable/ic_menu_camera.xml" value="0.105" />
         <entry key="..\:/Users/njoki/AndroidStudioProjects/WQMS/app/src/main/res/drawable/ic_menu_gallery.xml" value="0.105" />
         <entry key="..\:/Users/njoki/AndroidStudioProjects/WQMS/app/src/main/res/drawable/ic_rate_me.xml" value="0.122" />
+        <entry key="..\:/Users/njoki/AndroidStudioProjects/WQMS/app/src/main/res/drawable/ic_sales.xml" value="0.105" />
         <entry key="..\:/Users/njoki/AndroidStudioProjects/WQMS/app/src/main/res/drawable/ic_turbidity.xml" value="0.122" />
         <entry key="..\:/Users/njoki/AndroidStudioProjects/WQMS/app/src/main/res/layout/activity_forgot_password.xml" value="0.225" />
         <entry key="..\:/Users/njoki/AndroidStudioProjects/WQMS/app/src/main/res/layout/activity_home.xml" value="0.225" />
         <entry key="..\:/Users/njoki/AndroidStudioProjects/WQMS/app/src/main/res/layout/activity_login.xml" value="0.22" />
         <entry key="..\:/Users/njoki/AndroidStudioProjects/WQMS/app/src/main/res/layout/activity_main.xml" value="0.1" />
         <entry key="..\:/Users/njoki/AndroidStudioProjects/WQMS/app/src/main/res/layout/activity_navigate.xml" value="0.14791666666666667" />
+        <entry key="..\:/Users/njoki/AndroidStudioProjects/WQMS/app/src/main/res/layout/activity_rate_app.xml" value="0.14791666666666667" />
         <entry key="..\:/Users/njoki/AndroidStudioProjects/WQMS/app/src/main/res/layout/activity_sign_up.xml" value="0.2109375" />
         <entry key="..\:/Users/njoki/AndroidStudioProjects/WQMS/app/src/main/res/layout/activity_sign_up2.xml" value="0.225" />
         <entry key="..\:/Users/njoki/AndroidStudioProjects/WQMS/app/src/main/res/layout/app_bar_navigate.xml" value="0.225" />
@@ -23,6 +26,7 @@
         <entry key="..\:/Users/njoki/AndroidStudioProjects/WQMS/app/src/main/res/layout/nav_header_navigate.xml" value="0.225" />
         <entry key="..\:/Users/njoki/AndroidStudioProjects/WQMS/app/src/main/res/layout/profile_fragment.xml" value="0.1" />
         <entry key="..\:/Users/njoki/AndroidStudioProjects/WQMS/app/src/main/res/layout/reports_fragment.xml" value="0.1" />
+        <entry key="..\:/Users/njoki/AndroidStudioProjects/WQMS/app/src/main/res/layout/reservoir_fragment.xml" value="0.1" />
         <entry key="..\:/Users/njoki/AndroidStudioProjects/WQMS/app/src/main/res/menu/activity_main_drawer.xml" value="0.1" />
         <entry key="..\:/Users/njoki/AndroidStudioProjects/WQMS/app/src/main/res/menu/navigate.xml" value="0.1" />
       </map>

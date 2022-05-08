@@ -11,10 +11,11 @@
     <ImageView
         android:id="@+id/logo_1"
         android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_height="200dp"
         android:layout_gravity="center_horizontal"
         android:layout_marginTop="30dp"
-        app:srcCompat="@drawable/logo" />
+        android:src="@drawable/avatar"
+        android:adjustViewBounds="true" />
 
 
         <EditText
@@ -26,6 +27,7 @@
             android:layout_gravity="center_horizontal"
             android:textAlignment="center"
             android:hint="Email Address"
+            android:clickable="true"
             android:inputType="textPersonName" />
 
         <EditText
@@ -84,7 +86,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:textStyle="bold"
-        android:layout_marginTop="140dp"
+        android:layout_marginTop="70dp"
         android:layout_gravity="center_horizontal"
         android:text="WQMS@2022" />
 

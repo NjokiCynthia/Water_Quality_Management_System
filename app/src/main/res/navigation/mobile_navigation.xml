@@ -14,12 +14,21 @@
     <fragment
         android:id="@+id/nav_live_data"
         android:name="com.example.wqms.navigation.ui.Live_Data.LiveDataFragment"
-        android:label="@string/menu_gallery"
-        tools:layout="@layout/fragment_gallery" />
-
+        android:label="Live Data"
+        tools:layout="@layout/fragment_live_data" />
     <fragment
-        android:id="@+id/nav_slideshow"
-        android:name="com.example.wqms.navigation.ui.Sales.SalesFragment"
-        android:label="@string/menu_slideshow"
-        tools:layout="@layout/fragment_slideshow" />
+        android:id="@+id/nav_sales"
+        android:name="com.example.wqms.navigation.ui.Sales_Reports.SalesFragment"
+        android:label="Sales/Reports"
+        tools:layout="@layout/fragment_sales"/>
+    <fragment
+        android:id="@+id/nav_reservoir"
+        android:name="com.example.wqms.navigation.ui.Reservoir.ReservoirFragment"
+        android:label="Reservoir"
+        tools:layout="@layout/reservoir_fragment"/>
+    <fragment
+        android:id="@+id/nav_profile"
+        android:name="com.example.wqms.navigation.ui.Edit_Profile.ProfileFragment"
+        android:label="Profile"
+        tools:layout="@layout/profile_fragment"/>
 </navigation>
