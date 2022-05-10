@@ -98,7 +98,8 @@ public class SignUpActivity extends AppCompatActivity {
                     startActivityForResult(takePicture, 0);
                 } else if (optionsMenu[i].equals("Choose from Gallery")) {
                     // choose from  external storage
-                    Intent pickPhoto = new Intent(Intent.ACTION_PICK, android.provider.MediaStore.Images.Media.EXTERNAL_CONTENT_URI);
+                    Intent pickPhoto = new Intent(Intent.ACTION_PICK,
+                            android.provider.MediaStore.Images.Media.EXTERNAL_CONTENT_URI);
                     startActivityForResult(pickPhoto, 1);
                 } else if (optionsMenu[i].equals("Exit")) {
                     dialogInterface.dismiss();
@@ -140,7 +141,7 @@ public class SignUpActivity extends AppCompatActivity {
                 if (ContextCompat.checkSelfPermission(SignUpActivity.this,
                         Manifest.permission.CAMERA) != PackageManager.PERMISSION_GRANTED) {
                     Toast.makeText(getApplicationContext(),
-                            "FlagUp Requires Access to Camara.", Toast.LENGTH_SHORT)
+                            "FlagUp Requires Access to Camera.", Toast.LENGTH_SHORT)
                             .show();
                 } else if (ContextCompat.checkSelfPermission(SignUpActivity.this,
                         Manifest.permission.WRITE_EXTERNAL_STORAGE) != PackageManager.PERMISSION_GRANTED) {
@@ -162,6 +163,7 @@ public class SignUpActivity extends AppCompatActivity {
                 case 0:
                     if (resultCode == RESULT_OK && data != null) {
                         Bitmap selectedImage = (Bitmap) data.getExtras().get("data");
+                        //logo_1.setImageBitmap(selectedImage);
                         logo_1.setImageBitmap(selectedImage);
                     }
                     break;

@@ -18,6 +18,7 @@
         android:adjustViewBounds="true" />
 
 
+
         <EditText
             android:id="@+id/email"
             android:layout_width="253dp"
