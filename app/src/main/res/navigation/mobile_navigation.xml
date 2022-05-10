@@ -33,7 +33,7 @@
         tools:layout="@layout/profile_fragment"/>
     <fragment
         android:id="@+id/nav_rate"
-        android:name="com.example.wqms.navigation.ui.RateApp.RateApp"
+        android:name="com.example.wqms.navigation.ui.RateApp.RateAppFragment"
         android:label="Sales"
         tools:layout="@layout/rate_app_fragment"/>
 

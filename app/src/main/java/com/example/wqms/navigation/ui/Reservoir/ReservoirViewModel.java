@@ -9,7 +9,7 @@ public class ReservoirViewModel extends ViewModel {
 
     public ReservoirViewModel() {
         mText = new MutableLiveData<>();
-        mText.setValue("This is home fragment");
+        mText.setValue("This is the reservoir fragment");
     }
 
     public LiveData<String> getText() {

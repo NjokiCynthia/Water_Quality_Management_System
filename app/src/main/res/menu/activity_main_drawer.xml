@@ -10,25 +10,25 @@
             android:title="@string/menu_home" />
         <item
             android:id="@+id/nav_live_data"
-            android:icon="@drawable/ic_ph"
+            android:icon="@drawable/ic_live_data"
             android:title="Live Data" />
         <item
             android:id="@+id/nav_sales"
-            android:icon="@drawable/ic_flow_rate"
+            android:icon="@drawable/ic_sales"
             android:title="Sales"/>
 
         <item
             android:id="@+id/nav_reservoir"
-            android:icon="@drawable/ic_turbidity"
+            android:icon="@drawable/ic_reservoir"
             android:title="Reservoir" />
 
         <item
             android:id="@+id/nav_profile"
-            android:icon="@drawable/ic_turbidity"
+            android:icon="@drawable/ic_profile"
             android:title="Edit Profile" />
         <item
             android:id="@+id/nav_rate"
-            android:icon="@drawable/ic_rate_me"
+            android:icon="@drawable/ic_rate"
             android:title="Rate Our App" />
 
     </group>

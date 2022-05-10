@@ -5,34 +5,35 @@ import androidx.lifecycle.ViewModelProvider;
 import android.os.Bundle;
 
 import androidx.annotation.NonNull;
-import androidx.annotation.Nullable;
 import androidx.fragment.app.Fragment;
 
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.TextView;
 
-import com.example.wqms.R;
+import com.example.wqms.databinding.RateAppFragmentBinding;
 
-public class RateApp extends Fragment {
+public class RateAppFragment extends Fragment {
 
-    private RateAppViewModel mViewModel;
+    private RateAppFragmentBinding binding;
 
-    public static RateApp newInstance() {
-        return new RateApp();
+    public View onCreateView(@NonNull LayoutInflater inflater,
+                             ViewGroup container, Bundle savedInstanceState) {
+        RateAppViewModel rateAppViewModel =
+                new ViewModelProvider(this).get(RateAppViewModel.class);
+
+        binding = RateAppFragmentBinding.inflate(inflater, container, false);
+        View root = binding.getRoot();
+
+        final TextView textView = binding.textRate;
+        rateAppViewModel.getText().observe(getViewLifecycleOwner(), textView::setText);
+        return root;
     }
 
     @Override
-    public View onCreateView(@NonNull LayoutInflater inflater, @Nullable ViewGroup container,
-                             @Nullable Bundle savedInstanceState) {
-        return inflater.inflate(R.layout.rate_app_fragment, container, false);
+    public void onDestroyView() {
+        super.onDestroyView();
+        binding = null;
     }
-
-    @Override
-    public void onActivityCreated(@Nullable Bundle savedInstanceState) {
-        super.onActivityCreated(savedInstanceState);
-        mViewModel = new ViewModelProvider(this).get(RateAppViewModel.class);
-        // TODO: Use the ViewModel
-    }
-
 }
