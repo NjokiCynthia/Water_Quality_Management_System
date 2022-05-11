@@ -48,6 +48,12 @@
             android:layout_weight="1"
             android:text="Custom" />
     </LinearLayout>
+
+    <com.github.mikephil.charting.charts.BarChart
+        android:id="@+id/fragment_sales_chart"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" />
+
     <TextView
         android:id="@+id/textView7"
         android:layout_gravity="center_horizontal"

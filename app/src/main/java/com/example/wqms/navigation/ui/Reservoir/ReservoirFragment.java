@@ -26,8 +26,8 @@ public class ReservoirFragment extends Fragment {
         binding = ReservoirFragmentBinding.inflate(inflater, container, false);
         View root = binding.getRoot();
 
-        final TextView textView = binding.textReports;
-        reservoirViewModel.getText().observe(getViewLifecycleOwner(), textView::setText);
+//        final TextView textView = binding.textReports;
+//        reservoirViewModel.getText().observe(getViewLifecycleOwner(), textView::setText);
         return root;
     }
 
