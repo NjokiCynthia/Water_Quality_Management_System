@@ -8,46 +8,41 @@
     android:orientation="vertical"
     tools:context=".navigation.ui.Sales_Reports.SalesFragment">
 
-
     <TextView
         android:id="@+id/textView4"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="SALES REPORTS" />
-
-    <LinearLayout
+    <com.google.android.material.tabs.TabLayout
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:orientation="horizontal">
+        android:layout_height="wrap_content">
 
-        <Button
-            android:id="@+id/button"
+        <com.google.android.material.tabs.TabItem
+            android:id="@+id/today"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_weight="1"
-            android:text="Today" />
+            android:text="@string/today" />
 
-        <Button
-            android:id="@+id/button2"
+        <com.google.android.material.tabs.TabItem
+            android:id="@+id/week"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_weight="1"
-            android:text="Week" />
+            android:text="@string/week" />
 
-        <Button
-            android:id="@+id/button3"
+        <com.google.android.material.tabs.TabItem
+            android:id="@+id/month"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_weight="1"
-            android:text="Month" />
+            android:text="@string/month" />
 
-        <Button
-            android:id="@+id/button4"
+        <com.google.android.material.tabs.TabItem
+            android:id="@+id/custom"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_weight="1"
-            android:text="Custom" />
-    </LinearLayout>
+            android:text="@string/custom" />
+
+    </com.google.android.material.tabs.TabLayout>
+
 
     <com.github.mikephil.charting.charts.BarChart
         android:id="@+id/fragment_sales_chart"
@@ -60,4 +55,6 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="WQMS@2022" />
+
+
 </androidx.appcompat.widget.LinearLayoutCompat>
