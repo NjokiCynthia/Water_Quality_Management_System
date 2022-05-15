@@ -29,23 +29,8 @@ public class Navigate extends AppCompatActivity {
         binding = ActivityNavigateBinding.inflate(getLayoutInflater());
         setContentView(binding.getRoot());
 
-//        NavigationView navigationView = (NavigationView) findViewById(R.id.nav_view);
-//        View headerView = navigationView.getHeaderView(0);
-//        TextView navUsername = (TextView) headerView.findViewById(R.id.navUsername);
-//        navUsername.setText("Your Text Here");
-
-//        View nav = navigationView.getHeaderView(0);
-//        TextView Username= (ImageView)nav.findViewById(R.id.username);
-//        TextView Email= (ImageView)nav.findViewById(R.id.Email);
-
         setSupportActionBar(binding.appBarNavigate.toolbar);
-        binding.appBarNavigate.fab.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                Snackbar.make(view, "Replace with your own action", Snackbar.LENGTH_LONG)
-                        .setAction("Action", null).show();
-            }
-        });
+
         DrawerLayout drawer = binding.drawerLayout;
         NavigationView navigationView = binding.navView;
         // Passing each menu ID as a set of Ids because each

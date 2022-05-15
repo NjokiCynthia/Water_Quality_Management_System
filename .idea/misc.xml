@@ -22,7 +22,10 @@
         <entry key="..\:/Users/njoki/AndroidStudioProjects/WQMS/app/src/main/res/layout/fragment_gallery.xml" value="0.14791666666666667" />
         <entry key="..\:/Users/njoki/AndroidStudioProjects/WQMS/app/src/main/res/layout/fragment_home.xml" value="0.1" />
         <entry key="..\:/Users/njoki/AndroidStudioProjects/WQMS/app/src/main/res/layout/fragment_live_data.xml" value="0.1" />
+        <entry key="..\:/Users/njoki/AndroidStudioProjects/WQMS/app/src/main/res/layout/fragment_month.xml" value="0.1" />
         <entry key="..\:/Users/njoki/AndroidStudioProjects/WQMS/app/src/main/res/layout/fragment_sales.xml" value="0.1" />
+        <entry key="..\:/Users/njoki/AndroidStudioProjects/WQMS/app/src/main/res/layout/fragment_today.xml" value="0.1" />
+        <entry key="..\:/Users/njoki/AndroidStudioProjects/WQMS/app/src/main/res/layout/fragment_week.xml" value="0.1" />
         <entry key="..\:/Users/njoki/AndroidStudioProjects/WQMS/app/src/main/res/layout/nav_header_navigate.xml" value="0.225" />
         <entry key="..\:/Users/njoki/AndroidStudioProjects/WQMS/app/src/main/res/layout/profile_fragment.xml" value="0.1" />
         <entry key="..\:/Users/njoki/AndroidStudioProjects/WQMS/app/src/main/res/layout/rate_app_fragment.xml" value="0.1" />
