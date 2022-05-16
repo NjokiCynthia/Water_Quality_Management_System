@@ -9,9 +9,11 @@
         <entry key="..\:/Users/njoki/AndroidStudioProjects/WQMS/app/src/main/res/drawable/ic_rate_me.xml" value="0.122" />
         <entry key="..\:/Users/njoki/AndroidStudioProjects/WQMS/app/src/main/res/drawable/ic_sales.xml" value="0.105" />
         <entry key="..\:/Users/njoki/AndroidStudioProjects/WQMS/app/src/main/res/drawable/ic_turbidity.xml" value="0.122" />
+        <entry key="..\:/Users/njoki/AndroidStudioProjects/WQMS/app/src/main/res/drawable/ic_visibility_black_18dp.xml" value="0.105" />
+        <entry key="..\:/Users/njoki/AndroidStudioProjects/WQMS/app/src/main/res/drawable/ic_visibility_off_black_18dp.xml" value="0.1" />
         <entry key="..\:/Users/njoki/AndroidStudioProjects/WQMS/app/src/main/res/layout/activity_forgot_password.xml" value="0.225" />
         <entry key="..\:/Users/njoki/AndroidStudioProjects/WQMS/app/src/main/res/layout/activity_home.xml" value="0.225" />
-        <entry key="..\:/Users/njoki/AndroidStudioProjects/WQMS/app/src/main/res/layout/activity_login.xml" value="0.22" />
+        <entry key="..\:/Users/njoki/AndroidStudioProjects/WQMS/app/src/main/res/layout/activity_login.xml" value="0.1" />
         <entry key="..\:/Users/njoki/AndroidStudioProjects/WQMS/app/src/main/res/layout/activity_main.xml" value="0.1" />
         <entry key="..\:/Users/njoki/AndroidStudioProjects/WQMS/app/src/main/res/layout/activity_navigate.xml" value="0.14791666666666667" />
         <entry key="..\:/Users/njoki/AndroidStudioProjects/WQMS/app/src/main/res/layout/activity_rate_app.xml" value="0.14791666666666667" />

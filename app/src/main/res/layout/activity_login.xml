@@ -36,24 +36,30 @@
         android:ems="10"
         android:hint="Email Address"
         android:minHeight="48dp"
-        android:textAlignment="center">
+        android:textAlignment="center"/>
 
-    </EditText>
-
-    <EditText
-        android:id="@+id/l_password"
-        android:layout_width="253dp"
+    <com.google.android.material.textfield.TextInputLayout
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:ems="10"
-        android:textAlignment="center"
-        android:hint="@string/password"
-        android:inputType="textPassword"
-        android:layout_marginTop="20dp"
-        android:layout_gravity="center_horizontal"
-        android:minHeight="48dp"
-        android:textColorHint="#757575"
-        android:autofillHints="" />
+        tools:ignore="Missing Constraints"
+        tools:layout_editor_absoluteX="32dp"
+        tools:layout_editor_absoluteY="256dp"
+        app:passwordToggleEnabled="true">
+        <EditText
+            android:id="@+id/l_password"
+            android:layout_width="253dp"
+            android:layout_height="wrap_content"
+            android:ems="10"
+            android:textAlignment="center"
+            android:hint="@string/password"
+            android:inputType="textPassword"
+            android:layout_marginTop="20dp"
+            android:layout_gravity="center_horizontal"
+            android:minHeight="48dp"
+            android:textColorHint="#757575"
+            android:autofillHints="" />
 
+    </com.google.android.material.textfield.TextInputLayout>
     <Button
         android:id="@+id/login"
         android:layout_width="253dp"
