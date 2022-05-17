@@ -61,7 +61,6 @@ public class SalesFragment extends Fragment {
         assert getFragmentManager() != null;
          adapter = new PagerAdapter(getFragmentManager(),
                         tab_layout.getTabCount());
-        viewpager.setAdapter(viewpager.getAdapter());
 
         tab_layout.addOnTabSelectedListener(new TabLayout.OnTabSelectedListener() {
             @Override
@@ -79,6 +78,8 @@ public class SalesFragment extends Fragment {
 
             }
         });
-        return viewpager;
+        viewpager.setAdapter(viewpager.getAdapter());
+//        return viewpager;
+        return view;
     }
 }
