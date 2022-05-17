@@ -45,13 +45,16 @@ public class LiveDataFragment extends Fragment {
     public View onCreateView(@NonNull LayoutInflater inflater,
                              ViewGroup container, Bundle savedInstanceState) {
         View rootView = inflater.inflate(R.layout.fragment_live_data, container, false);
-        line_chart = (LineChart) rootView.findViewById(R.id.nav_live_data);
-        graph_init();//for initialize graph
+       /* TODO : Find way Corrcet way to intialaize your line chart from phils library
+            line_chart = (LineChart) rootView.findViewById(R.id.nav_live_data);
+        graph_init();//for initialize graphgraph_init
+
+        */
         return rootView;
     }
 
     private ILineDataSet graph_init() {
-        line_chart.setOnChartValueSelectedListener((OnChartValueSelectedListener) this);                // enable description text
+     line_chart.setOnChartValueSelectedListener((OnChartValueSelectedListener) getContext());                // enable description text
         // line_chart.setDescription().setEnabled(true);
 
         // enable touch gestures
