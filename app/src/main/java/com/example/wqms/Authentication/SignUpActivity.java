@@ -8,6 +8,7 @@ import androidx.core.content.ContextCompat;
 import android.Manifest;
 import android.app.Activity;
 import android.app.AlertDialog;
+import android.app.ProgressDialog;
 import android.content.Context;
 import android.content.DialogInterface;
 import android.content.Intent;
@@ -30,15 +31,22 @@ import android.widget.Toast;
 import com.example.wqms.R;
 import com.example.wqms.model.User;
 import com.google.android.gms.tasks.OnCompleteListener;
+import com.google.android.gms.tasks.OnFailureListener;
+import com.google.android.gms.tasks.OnSuccessListener;
 import com.google.android.gms.tasks.Task;
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
+import com.google.firebase.storage.FirebaseStorage;
+import com.google.firebase.storage.OnProgressListener;
+import com.google.firebase.storage.StorageReference;
+import com.google.firebase.storage.UploadTask;
 import com.google.gson.Gson;
 
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Objects;
+import java.util.UUID;
 
 public class SignUpActivity extends AppCompatActivity {
     ImageView logo_1;
@@ -48,15 +56,21 @@ public class SignUpActivity extends AppCompatActivity {
     User user;
     FirebaseAuth mAuth;
     String userName, emailAddress, phoneNumber, Password, uuid;
+    //Firebase
+    FirebaseStorage storage;
+    StorageReference storageReference;
     FirebaseDatabase firebaseDatabase;
     DatabaseReference databaseReference;
     private SharedPreferences sharedPreferences;
     public static final int REQUEST_ID_MULTIPLE_PERMISSIONS = 101;
+    int SELECT_PICTURE = 200;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_sign_up);
+
+        getSupportActionBar().setDisplayShowTitleEnabled(false);
 
         sign_up = findViewById(R.id.sign_up);
         login_text = findViewById(R.id.login_text);
@@ -65,6 +79,18 @@ public class SignUpActivity extends AppCompatActivity {
         password = findViewById(R.id.password);
         username = findViewById(R.id.username);
         logo_1 = findViewById(R.id.logo_1);
+
+        login_text.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent(SignUpActivity.this,
+                        com.example.wqms.Authentication.LoginActivity.class);
+                startActivity(intent);
+            }
+        });
+
+        storage = FirebaseStorage.getInstance();
+        storageReference = storage.getReference();
 
         mAuth = FirebaseAuth.getInstance();
         firebaseDatabase = FirebaseDatabase.getInstance();
@@ -98,15 +124,24 @@ public class SignUpActivity extends AppCompatActivity {
                     startActivityForResult(takePicture, 0);
                 } else if (optionsMenu[i].equals("Choose from Gallery")) {
                     // choose from  external storage
-                    Intent pickPhoto = new Intent(Intent.ACTION_PICK,
-                            android.provider.MediaStore.Images.Media.EXTERNAL_CONTENT_URI);
-                    startActivityForResult(pickPhoto, 1);
+//                    Intent pickPhoto = new Intent(Intent.ACTION_PICK,
+//                            android.provider.MediaStore.Images.Media.EXTERNAL_CONTENT_URI);
+//                    startActivityForResult(pickPhoto, 1);
+                    Intent pickPhoto = new Intent();
+                    pickPhoto.setType("image/*");
+                    pickPhoto.setAction(Intent.ACTION_GET_CONTENT);
+
+                    // pass the constant to compare it
+                    // with the returned requestCode
+                    startActivityForResult(Intent.createChooser(pickPhoto, "Select Picture"),
+                            SELECT_PICTURE);
                 } else if (optionsMenu[i].equals("Exit")) {
                     dialogInterface.dismiss();
                 }
             }
         });
         builder.show();
+
     }
 
     // function to check permission
@@ -163,7 +198,6 @@ public class SignUpActivity extends AppCompatActivity {
                 case 0:
                     if (resultCode == RESULT_OK && data != null) {
                         Bitmap selectedImage = (Bitmap) data.getExtras().get("data");
-                        //logo_1.setImageBitmap(selectedImage);
                         logo_1.setImageBitmap(selectedImage);
                     }
                     break;
@@ -177,9 +211,43 @@ public class SignUpActivity extends AppCompatActivity {
                                 cursor.moveToFirst();
                                 int columnIndex = cursor.getColumnIndex(filePathColumn[0]);
                                 String picturePath = cursor.getString(columnIndex);
-                                logo_1.setImageBitmap(BitmapFactory.decodeFile(picturePath));
+                               logo_1.setImageBitmap(BitmapFactory.decodeFile(picturePath));
+                                //logo_1.setImageBitmap(picturePath);
                                 cursor.close();
                             }
+                        }
+                        if(selectedImage != null)
+                        {
+                            final ProgressDialog progressDialog = new ProgressDialog(this);
+                            progressDialog.setTitle("Uploading...");
+                            progressDialog.show();
+
+                            StorageReference ref = storageReference.child("images/"+
+                                    UUID.randomUUID().toString());
+                            ref.putFile(selectedImage)
+                                    .addOnSuccessListener(new OnSuccessListener<UploadTask.TaskSnapshot>()
+                                    {
+                                        @Override
+                                        public void onSuccess(UploadTask.TaskSnapshot taskSnapshot) {
+                                            progressDialog.dismiss();
+                                            Toast.makeText(SignUpActivity.this, "Uploaded", Toast.LENGTH_SHORT).show();
+                                        }
+                                    })
+                                    .addOnFailureListener(new OnFailureListener() {
+                                        @Override
+                                        public void onFailure(@NonNull Exception e) {
+                                            progressDialog.dismiss();
+                                            Toast.makeText(SignUpActivity.this, "Failed "+e.getMessage(), Toast.LENGTH_SHORT).show();
+                                        }
+                                    })
+                                    .addOnProgressListener(new OnProgressListener<UploadTask.TaskSnapshot>() {
+                                        @Override
+                                        public void onProgress(UploadTask.TaskSnapshot taskSnapshot) {
+                                            double progress = (100.0*taskSnapshot.getBytesTransferred()/taskSnapshot
+                                                    .getTotalByteCount());
+                                            progressDialog.setMessage("Uploaded "+(int)progress+"%");
+                                        }
+                                    });
                         }
                     }
                     break;
@@ -189,7 +257,7 @@ public class SignUpActivity extends AppCompatActivity {
                 @Override
                 public void onClick(View view) {
                     Intent intent = new Intent(SignUpActivity.this,
-                            com.example.wqms.Authentication.LoginActivity.class);
+                            LoginActivity.class);
                     startActivity(intent);
                 }
             });
@@ -272,15 +340,6 @@ public class SignUpActivity extends AppCompatActivity {
                                 }).addOnFailureListener(e -> resetFields());
                             }
                         });
-//        private void saveInfo(User user, String id) {
-//            //progressDialog.dismiss();
-//            user.setPassword("");
-//            databaseReference.child(uuid).setValue(user).addOnSuccessListener(task -> {
-//                Toast.makeText(getApplicationContext(), "Registration Successful ", Toast.LENGTH_LONG).show();
-//                startActivity(new Intent(this, LoginActivity.class));
-//
-//            });
-//        }
             }
         }
 

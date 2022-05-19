@@ -17,12 +17,14 @@
         android:src="@drawable/avatar"
         android:adjustViewBounds="true" />
 
-
-
+    <com.google.android.material.textfield.TextInputLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal">
         <EditText
             android:id="@+id/email"
             android:layout_width="253dp"
-            android:layout_marginTop="30dp"
+            android:layout_marginTop="20dp"
             android:layout_height="wrap_content"
             android:ems="10"
             android:layout_gravity="center_horizontal"
@@ -30,39 +32,55 @@
             android:hint="Email Address"
             android:clickable="true"
             android:inputType="textPersonName" />
+    </com.google.android.material.textfield.TextInputLayout>
 
-        <EditText
+    <com.google.android.material.textfield.TextInputLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal">
+    <EditText
             android:id="@+id/username"
             android:layout_width="253dp"
             android:layout_height="wrap_content"
-            android:layout_marginTop="30dp"
+            android:layout_marginTop="20dp"
             android:ems="10"
             android:layout_gravity="center_horizontal"
             android:textAlignment="center"
             android:hint="Username"
             android:inputType="textPersonName" />
+    </com.google.android.material.textfield.TextInputLayout>
 
-        <EditText
+    <com.google.android.material.textfield.TextInputLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal">
+    <EditText
             android:id="@+id/phone"
             android:layout_width="253dp"
             android:layout_height="wrap_content"
-            android:layout_marginTop="30dp"
+            android:layout_marginTop="20dp"
             android:ems="10"
             android:layout_gravity="center_horizontal"
             android:textAlignment="center"
             android:hint="Phone Number"
             android:inputType="phone" />
+    </com.google.android.material.textfield.TextInputLayout>
 
-        <EditText
+    <com.google.android.material.textfield.TextInputLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal">
+    <EditText
             android:id="@+id/password"
             android:layout_width="253dp"
-            android:layout_marginTop="30dp"
+            android:layout_marginTop="20dp"
             android:layout_height="wrap_content"
             android:layout_gravity="center_horizontal"
             android:ems="10"
             android:hint="Password"
             android:textAlignment="center"
             android:inputType="textPassword" />
+    </com.google.android.material.textfield.TextInputLayout>
 
     <Button
         android:id="@+id/sign_up"

@@ -32,6 +32,8 @@ public class LoginActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_login);
 
+        getSupportActionBar().setDisplayShowTitleEnabled(false);
+
         login = findViewById(R.id.login);
         sign_up_text = findViewById(R.id.sign_up_text);
         forgot = findViewById(R.id.forgot);

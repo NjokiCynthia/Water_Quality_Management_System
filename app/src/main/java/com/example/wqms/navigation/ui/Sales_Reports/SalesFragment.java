@@ -19,6 +19,7 @@ import com.example.wqms.R;
 import com.example.wqms.databinding.FragmentSalesBinding;
 import com.example.wqms.navigation.PagerAdapter;
 import com.github.mikephil.charting.charts.BarChart;
+import com.github.mikephil.charting.charts.LineChart;
 import com.github.mikephil.charting.data.BarData;
 import com.github.mikephil.charting.data.BarDataSet;
 import com.github.mikephil.charting.data.BarEntry;
@@ -37,15 +38,10 @@ public class SalesFragment extends Fragment {
     TabLayout tab_layout;
     PagerAdapter adapter;
 
-    private BarChart chart;
-
-    private FragmentSalesBinding binding;
-
     public View onCreateView(@NonNull LayoutInflater inflater,
                              @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
         View view = inflater.inflate(R.layout.fragment_sales, container, false);
 
-        chart = view.findViewById(R.id.fragment_sales_chart);
         viewpager = view.findViewById(R.id.viewpager);
         today = view.findViewById(R.id.today);
         week = view.findViewById(R.id.week);

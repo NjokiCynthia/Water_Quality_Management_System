@@ -37,7 +37,7 @@ public class Navigate extends AppCompatActivity {
         // menu should be considered as top level destinations.
 
         mAppBarConfiguration = new AppBarConfiguration.Builder(
-                R.id.nav_home, R.id.nav_live_data, R.id.nav_sales,
+                R.id.nav_live_data, R.id.nav_sales,
                 R.id.nav_reservoir, R.id.nav_profile, R.id.nav_rate)
                 .setOpenableLayout(drawer)
                 .build();
