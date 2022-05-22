@@ -1,9 +1,13 @@
 package com.example.wqms.Authentication;
 
+import static android.graphics.Color.BLUE;
+import static android.graphics.Color.RED;
+
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
+import android.graphics.Color;
 import android.os.Bundle;
 import android.util.Patterns;
 import android.view.View;
@@ -41,17 +45,15 @@ public class LoginActivity extends AppCompatActivity {
         l_email = findViewById(R.id.l_email);
         l_password = findViewById(R.id.l_password);
 
+        login.setBackgroundColor(Color.parseColor("#738b28"));
+
         mAuth = FirebaseAuth.getInstance();
 
-        sign_up_text.setOnClickListener(new View.OnClickListener() {
-
-            @Override
-            public void onClick(View view) {
-                loginUser();
-                Intent intent = new Intent(LoginActivity.this,
-                        com.example.wqms.Authentication.SignUpActivity.class);
-                startActivity(intent);
-            }
+        sign_up_text.setOnClickListener(view -> {
+            loginUser();
+            Intent intent = new Intent(LoginActivity.this,
+                    SignUpActivity.class);
+            startActivity(intent);
         });
 
         forgot.setOnClickListener(new View.OnClickListener() {

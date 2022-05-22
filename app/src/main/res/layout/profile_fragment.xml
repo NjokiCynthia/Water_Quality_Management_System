@@ -14,7 +14,8 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_gravity="center_horizontal"
-        android:src="@drawable/logo" />
+        android:layout_marginTop="20dp"
+        android:src="@drawable/image" />
 
     <Button
         android:id="@+id/button5"
@@ -23,30 +24,44 @@
         android:layout_gravity="center_horizontal"
         android:text="Upload New Photo" />
 
+    <com.google.android.material.textfield.TextInputLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal">
 
     <EditText
         android:id="@+id/editTextTextEmailAddress"
-        android:layout_width="wrap_content"
+        android:layout_width="253dp"
         android:layout_height="wrap_content"
         android:layout_marginTop="20dp"
         android:ems="10"
         android:hint="Change Email Address"
         android:layout_gravity="center_horizontal"
         android:inputType="textEmailAddress" />
+    </com.google.android.material.textfield.TextInputLayout>
+    <com.google.android.material.textfield.TextInputLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal">
 
     <EditText
         android:id="@+id/editTextTextPersonName4"
-        android:layout_width="wrap_content"
+        android:layout_width="253dp"
         android:layout_height="wrap_content"
         android:ems="10"
         android:layout_marginTop="20dp"
         android:layout_gravity="center_horizontal"
         android:inputType="textPersonName"
         android:hint="Change Username" />
+    </com.google.android.material.textfield.TextInputLayout>
+    <com.google.android.material.textfield.TextInputLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal">
 
     <EditText
         android:id="@+id/editTextTextPersonName5"
-        android:layout_width="wrap_content"
+        android:layout_width="253dp"
         android:layout_height="wrap_content"
         android:ems="10"
         android:layout_marginTop="20dp"
@@ -54,15 +69,24 @@
         android:inputType="textPersonName"
         android:hint="Change Phone Number" />
 
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal">
+
     <EditText
         android:id="@+id/editTextTextPersonName6"
-        android:layout_width="wrap_content"
+        android:layout_width="253dp"
         android:layout_height="wrap_content"
         android:ems="10"
         android:layout_marginTop="20dp"
         android:inputType="textPersonName"
         android:layout_gravity="center_horizontal"
         android:hint="Change password" />
+    </com.google.android.material.textfield.TextInputLayout>
+
 
     <Button
         android:id="@+id/button6"
@@ -86,6 +110,6 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_gravity="center_horizontal"
-        android:layout_marginTop="130dp"
+        android:layout_marginTop="80dp"
         android:text="WQMS@2022" />
 </androidx.appcompat.widget.LinearLayoutCompat>

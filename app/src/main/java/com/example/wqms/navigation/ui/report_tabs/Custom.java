@@ -1,4 +1,4 @@
-package com.example.wqms;
+package com.example.wqms.navigation.ui.report_tabs;
 
 import android.os.Bundle;
 
@@ -8,12 +8,14 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 
+import com.example.wqms.R;
+
 /**
  * A simple {@link Fragment} subclass.
- * Use the {@link Week#newInstance} factory method to
+ * Use the {@link Custom#newInstance} factory method to
  * create an instance of this fragment.
  */
-public class Week extends Fragment {
+public class Custom extends Fragment {
 
     // TODO: Rename parameter arguments, choose names that match
     // the fragment initialization parameters, e.g. ARG_ITEM_NUMBER
@@ -24,7 +26,7 @@ public class Week extends Fragment {
     private String mParam1;
     private String mParam2;
 
-    public Week() {
+    public Custom() {
         // Required empty public constructor
     }
 
@@ -34,11 +36,11 @@ public class Week extends Fragment {
      *
      * @param param1 Parameter 1.
      * @param param2 Parameter 2.
-     * @return A new instance of fragment Week.
+     * @return A new instance of fragment Custom.
      */
     // TODO: Rename and change types and number of parameters
-    public static Week newInstance(String param1, String param2) {
-        Week fragment = new Week();
+    public static Custom newInstance(String param1, String param2) {
+        Custom fragment = new Custom();
         Bundle args = new Bundle();
         args.putString(ARG_PARAM1, param1);
         args.putString(ARG_PARAM2, param2);
@@ -59,6 +61,6 @@ public class Week extends Fragment {
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
-        return inflater.inflate(R.layout.fragment_week, container, false);
+        return inflater.inflate(R.layout.fragment_custom, container, false);
     }
 }

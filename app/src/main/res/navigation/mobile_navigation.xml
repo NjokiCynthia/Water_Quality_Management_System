@@ -13,7 +13,7 @@
     <fragment
         android:id="@+id/nav_sales"
         android:name="com.example.wqms.navigation.ui.Sales_Reports.SalesFragment"
-        android:label="Reservoir"
+        android:label="Sales Report"
         tools:layout="@layout/fragment_sales"/>
     <fragment
         android:id="@+id/nav_reservoir"
@@ -28,7 +28,7 @@
     <fragment
         android:id="@+id/nav_rate"
         android:name="com.example.wqms.navigation.ui.RateApp.RateAppFragment"
-        android:label="Sales"
+        android:label="Rate Application"
         tools:layout="@layout/rate_app_fragment"/>
 
 </navigation>
