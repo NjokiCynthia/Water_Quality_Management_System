@@ -3,24 +3,24 @@
     package="com.example.wqms">
 
     <uses-permission android:name="android.permission.INTERNET" />
-    <uses-permission android:name="android.permission.CAMERA"/>
-    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE"/>
+    <uses-permission android:name="android.permission.CAMERA" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
 
     <application
         android:allowBackup="true"
-        android:icon="@mipmap/ic_launcher"
+        android:icon="@drawable/image"
         android:label="@string/app_name"
-        android:roundIcon="@mipmap/ic_launcher_round"
+        android:roundIcon="@mipmap/ic_logo_foreground"
         android:supportsRtl="true"
         android:theme="@style/Theme.WQMS">
+<!--        <activity-->
+<!--            android:name=".MyMarkerView"-->
+<!--            android:exported="false" />-->
         <activity
             android:name=".navigation.Navigate"
             android:exported="false"
             android:label="@string/title_activity_navigate"
             android:theme="@style/Theme.WQMS.NoActionBar" />
-        <activity
-            android:name=".ui.Home"
-            android:exported="false" />
         <activity
             android:name=".Authentication.SignUpActivity"
             android:exported="false" />

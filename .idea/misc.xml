@@ -11,10 +11,12 @@
         <entry key="..\:/Users/njoki/AndroidStudioProjects/WQMS/app/src/main/res/drawable/ic_turbidity.xml" value="0.122" />
         <entry key="..\:/Users/njoki/AndroidStudioProjects/WQMS/app/src/main/res/drawable/ic_visibility_black_18dp.xml" value="0.105" />
         <entry key="..\:/Users/njoki/AndroidStudioProjects/WQMS/app/src/main/res/drawable/ic_visibility_off_black_18dp.xml" value="0.1" />
+        <entry key="..\:/Users/njoki/AndroidStudioProjects/WQMS/app/src/main/res/layout/activity_custom_marker_view.xml" value="0.22395833333333334" />
         <entry key="..\:/Users/njoki/AndroidStudioProjects/WQMS/app/src/main/res/layout/activity_forgot_password.xml" value="0.225" />
         <entry key="..\:/Users/njoki/AndroidStudioProjects/WQMS/app/src/main/res/layout/activity_home.xml" value="0.225" />
         <entry key="..\:/Users/njoki/AndroidStudioProjects/WQMS/app/src/main/res/layout/activity_login.xml" value="0.1" />
         <entry key="..\:/Users/njoki/AndroidStudioProjects/WQMS/app/src/main/res/layout/activity_main.xml" value="0.1" />
+        <entry key="..\:/Users/njoki/AndroidStudioProjects/WQMS/app/src/main/res/layout/activity_my_marker_view.xml" value="0.1" />
         <entry key="..\:/Users/njoki/AndroidStudioProjects/WQMS/app/src/main/res/layout/activity_navigate.xml" value="0.14791666666666667" />
         <entry key="..\:/Users/njoki/AndroidStudioProjects/WQMS/app/src/main/res/layout/activity_rate_app.xml" value="0.14791666666666667" />
         <entry key="..\:/Users/njoki/AndroidStudioProjects/WQMS/app/src/main/res/layout/activity_sign_up.xml" value="0.2109375" />
@@ -37,6 +39,9 @@
         <entry key="..\:/Users/njoki/AndroidStudioProjects/WQMS/app/src/main/res/layout/tab_layout.xml" value="0.1" />
         <entry key="..\:/Users/njoki/AndroidStudioProjects/WQMS/app/src/main/res/menu/activity_main_drawer.xml" value="0.1" />
         <entry key="..\:/Users/njoki/AndroidStudioProjects/WQMS/app/src/main/res/menu/navigate.xml" value="0.1" />
+        <entry key="..\:/Users/njoki/AndroidStudioProjects/WQMS/app/src/main/res/mipmap-anydpi-v26/ic_logo.xml" value="0.105" />
+        <entry key="..\:/Users/njoki/AndroidStudioProjects/WQMS/app/src/main/res/mipmap-anydpi-v26/ic_logo_round.xml" value="0.1" />
+        <entry key="..\:/Users/njoki/AndroidStudioProjects/WQMS/app/src/main/res/mipmap-anydpi-v26/ic_reservoir.xml" value="0.104" />
       </map>
     </option>
   </component>

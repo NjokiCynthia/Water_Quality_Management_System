@@ -17,6 +17,7 @@ import android.content.pm.PackageManager;
 import android.database.Cursor;
 import android.graphics.Bitmap;
 import android.graphics.BitmapFactory;
+import android.graphics.Color;
 import android.net.Uri;
 import android.os.Bundle;
 import android.provider.MediaStore;
@@ -56,6 +57,7 @@ public class SignUpActivity extends AppCompatActivity {
     User user;
     FirebaseAuth mAuth;
     String userName, emailAddress, phoneNumber, Password, uuid;
+
     //Firebase
     FirebaseStorage storage;
     StorageReference storageReference;
@@ -79,6 +81,8 @@ public class SignUpActivity extends AppCompatActivity {
         password = findViewById(R.id.password);
         username = findViewById(R.id.username);
         logo_1 = findViewById(R.id.logo_1);
+
+        sign_up.setBackgroundColor(Color.parseColor("#4285F4"));
 
         login_text.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -124,12 +128,12 @@ public class SignUpActivity extends AppCompatActivity {
                     startActivityForResult(takePicture, 0);
                 } else if (optionsMenu[i].equals("Choose from Gallery")) {
                     // choose from  external storage
-//                    Intent pickPhoto = new Intent(Intent.ACTION_PICK,
-//                            android.provider.MediaStore.Images.Media.EXTERNAL_CONTENT_URI);
-//                    startActivityForResult(pickPhoto, 1);
-                    Intent pickPhoto = new Intent();
-                    pickPhoto.setType("image/*");
-                    pickPhoto.setAction(Intent.ACTION_GET_CONTENT);
+                    Intent pickPhoto = new Intent(Intent.ACTION_PICK,
+                            android.provider.MediaStore.Images.Media.EXTERNAL_CONTENT_URI);
+                    startActivityForResult(pickPhoto, 1);
+//                    Intent pickPhoto = new Intent();
+//                    pickPhoto.setType("image/*");
+//                    pickPhoto.setAction(Intent.ACTION_GET_CONTENT);
 
                     // pass the constant to compare it
                     // with the returned requestCode
@@ -261,6 +265,8 @@ public class SignUpActivity extends AppCompatActivity {
                     startActivity(intent);
                 }
             });
+
+
             sign_up.setOnClickListener(view -> createFirebaseUser());
 
         }
@@ -271,7 +277,6 @@ public class SignUpActivity extends AppCompatActivity {
             emailAddress = email.getText().toString();
             phoneNumber = phone.getText().toString();
             Password = password.getText().toString();
-            //String newPass =  sha256(password);
 
             if (userName.isEmpty()) {
                 username.setError("The username is required");
@@ -297,7 +302,8 @@ public class SignUpActivity extends AppCompatActivity {
                 password.setError("The password should be longer than six characters");
                 password.requestFocus();
                 return;
-            } else {
+            }
+        else {
                 user = new User();
                 user.setEmailAddress(emailAddress);
                 user.setPassword(Password);
@@ -307,7 +313,7 @@ public class SignUpActivity extends AppCompatActivity {
                 mAuth.createUserWithEmailAndPassword(emailAddress, Password)
                         .addOnCompleteListener(task -> {
                             if (task.isSuccessful()) {
-                                //User user = new User(emailAddress, phoneNumber, userName);
+
 
                                 firebaseDatabase.getInstance().getReference("user")
                                         .child(Objects.requireNonNull(FirebaseAuth.getInstance()

@@ -45,7 +45,7 @@ public class LoginActivity extends AppCompatActivity {
         l_email = findViewById(R.id.l_email);
         l_password = findViewById(R.id.l_password);
 
-        login.setBackgroundColor(Color.parseColor("#738b28"));
+        login.setBackgroundColor(Color.parseColor("#4285F4"));
 
         mAuth = FirebaseAuth.getInstance();
 
